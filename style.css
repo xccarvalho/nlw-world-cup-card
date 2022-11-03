@@ -9,7 +9,7 @@ body * {
 }
 
 body {
-  background: linear-gradient(151.79deg, #0F2B05 4.34%, #000000 87.6%);
+  background: linear-gradient(151.79deg, #0f2b05 4.34%, #000000 87.6%);
   height: 100vh;
   text-align: center;
 }
@@ -23,6 +23,15 @@ header {
   width: 354px;
   height: 508px;
   background-image: url(./assets/bg-ignite.svg);
+  cursor: pointer;
+
+  /* to animation */
+  opacity: 0;
+  transform: skew(50deg, 50deg);
+  animation: appear 0.7s forwards;
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .card>img {
@@ -30,15 +39,21 @@ header {
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #F7DD43;
+  border: 4px solid #f7dd43;
   margin-top: 115px;
+
+  /* to not get de clicks */
+  pointer-events: none;
+  /* To not select the img with de event onClick */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .info {
   margin-top: 98px;
   margin-left: 70px;
   text-align: left;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .info h1 {
@@ -49,4 +64,12 @@ header {
 .info p {
   font-size: 14px;
   line-height: 160%;
+}
+
+/* to animation */
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: skew(0deg, 0deg);
+  }
 }
