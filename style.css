@@ -25,7 +25,10 @@ header {
   background-image: url(./assets/bg-ignite.svg);
   cursor: pointer;
 
-  /* to animation */
+  /* when user click to change de background */
+  transition: all 320ms cubic-bezier(0.4, 0, 1, 1) 0s;
+
+  /* to animation when the page is rendered */
   opacity: 0;
   transform: skew(50deg, 50deg);
   animation: appear 0.7s forwards;
